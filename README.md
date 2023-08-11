@@ -1,7 +1,7 @@
 # POO
-Universidade Catolica de Brasilia
-Pedro Henrique Guedes de Almeida
-UC 22102359
+- Universidade Catolica de Brasilia
+- Pedro Henrique Guedes de Almeida
+- UC 22102359
 ## Aula 2
-PowerShell
-java básico
+- PowerShell
+- java básico
