@@ -16,10 +16,10 @@ public class verificaNumeroPrimo {
             return isPrime = 0;
         }
 
-        if(n % 2 == 0){
+        if(n % 2 == 0 && n != 2){
             return isPrime = 0;
         }
-        
+
         for(i = n - 1;i > 1; i--){
             if(n % i == 0){
                 isPrime = 0;
