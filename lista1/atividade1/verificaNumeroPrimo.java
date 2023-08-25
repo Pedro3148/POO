@@ -13,8 +13,11 @@ public class verificaNumeroPrimo {
         int i;
 
         if(n == 1){
-            isPrime = 0;
-            return isPrime;
+            return isPrime = 0;
+        }
+
+        if(n % 2 == 0 && n != 2){
+            return isPrime = 0;
         }
 
         for(i = n - 1;i > 1; i--){
