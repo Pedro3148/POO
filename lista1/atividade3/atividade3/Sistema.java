@@ -22,39 +22,31 @@ import java.util.Scanner;
     }    
     
     public static void executarOpcao(int opcao, Scanner scanner, Estoque estoque){
-        
+        String nome = "";
+        int qtd = 0;
         switch (opcao) {
             case 1:
                 System.out.print("Nome: ");
-                String nomeAd = scanner.nextLine();
+                nome = scanner.nextLine();
                 System.out.print("Qtd: ");
-                int qtd = scanner.nextInt();
-                Objeto o = new Objeto(nomeAd, qtd);
+                qtd = scanner.nextInt();
+                Objeto o = new Objeto(nome, qtd);
                 estoque.adicionarObjeto(o);
                 break;
             case 2:
                 System.out.print("Nome: ");
-                String nomeRev = scanner.nextLine();
-                Objeto objRev = null;
-                for (Objeto obj : estoque.acharObjeto()) {
-                    if(obj.nome == nomeRev){
-                        objRev = obj;
-                    }
-                    
-                }
-                if(objRev != null){
-                    estoque.removerObjeto(objRev);
-                }
+                nome = scanner.nextLine();
+                estoque.removerObjeto(nome);
                 break;
             case 3:
                 System.out.println(estoque.listarEstoque());
                 break;
             case 4:
                 System.out.print("Nome: ");
-                String nomeAt = scanner.nextLine();
+                nome = scanner.nextLine();
                 System.out.print("Qtd: ");
-                int qtdNova = scanner.nextInt();
-                estoque.atualizarQtd(nomeAt, qtdNova);
+                qtd = scanner.nextInt();
+                estoque.atualizarQtd(nome, qtd);
                 break;
         }
 

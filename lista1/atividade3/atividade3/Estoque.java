@@ -1,6 +1,5 @@
 package atividade3;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Estoque {
     ArrayList<Objeto> objetos;
@@ -10,11 +9,25 @@ public class Estoque {
     }
 
     public void adicionarObjeto(Objeto o){
+        for (Objeto obj : objetos) {
+            if(obj.nome.equals(o.nome)){
+                System.out.println("Objeto ja cadastrado");
+                return;
+            }
+        }
+        
         this.objetos.add(o);
     }
 
-    public void removerObjeto(Objeto o){
-         this.objetos.remove(o);
+    public void removerObjeto(String nome){
+         for (Objeto o : objetos) {
+            if (o.nome.equals(nome)) {
+                objetos.remove(o);
+                System.out.println("Objeto removido");
+                return;
+            }
+         }
+         System.out.println("Objeto nao cadastrado");
     }
 
     public String listarEstoque(){
@@ -29,15 +42,11 @@ public class Estoque {
 
     public void atualizarQtd(String nome, int qtdNova){
         for (Objeto o : this.objetos) {
-            if (nome == o.nome) {
+            if (o.nome.equals(nome)) {
                 o.qtd = qtdNova;
                 return;
             }
         }
         System.out.println("Nao tem esse objeto no estoque");
-    }
-
-    public List<Objeto> acharObjeto(){
-        return objetos; 
     }
 }
