@@ -3,9 +3,9 @@ package atividade6.parque;
 import java.math.BigDecimal;
 
 public class Funcionario{
-  protected String nome;
-  protected Integer cpf;
-  protected Integer telefone;
+  private String nome;
+  private Integer cpf;
+  private Integer telefone;
 
   public Funcionario(){
   }
@@ -40,11 +40,11 @@ public class Funcionario{
   }
    @Override
     public String toString() {
-        return "{" +
-            " nome='" + getNome() + "'" +
-            ", cpf='" + getCpf() + "'" +
-            ", telefone='" + getTelefone() + "'" +
-            ", salario= '" + getSalario() + "'" + 
-            "}";
+        return "Funcionario\n" +
+            "Nome:" + getNome() + 
+            ", Cpf: " + getCpf() + 
+            ", Telefone: " + getTelefone() + 
+            ", Salario: " + getSalario() + 
+            "\n";
     }
 }
