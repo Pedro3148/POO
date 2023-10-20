@@ -1,7 +1,5 @@
 package encapsulamento;
 
-import java.net.PortUnreachableException;
-
 public class ContaCorrente {
     private Integer numero;
     private Double saldo;
