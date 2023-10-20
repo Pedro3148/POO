@@ -22,5 +22,10 @@ public class ArrayListEx {
         if (!listaDeNomes.contains("Carol")) {
             System.out.println("Carol nao esta na lista");
         }
+
+        listaDeNomes.clear();
+        if(listaDeNomes.isEmpty()) {
+            System.out.println("Lista vazia");
+        }
     }
 }
